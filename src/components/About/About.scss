@@ -1,0 +1,63 @@
+@import '../../css-config/mixins.scss';
+
+@font-face {
+  font-family: 'Zenith';
+  src: url('../../Fonts/KochireRegular-eZJwl.otf');
+}
+
+.about-div {
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include md {
+    padding: 2%;
+  }
+  h1 {
+    font-size: 50px;
+    font-family: 'Zenith';
+    font-weight: 200;
+    line-height: 1;
+    color: #ff512f;
+    margin: 0 auto;
+    @include md {
+      font-size: 100px;
+    }
+    span {
+      font-family: 'Zenith';
+    }
+  }
+  .sec-heading {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    @include md {
+      margin-bottom: 35px;
+      font-size: 24px;
+    }
+    &:after {
+      content: '';
+      display: block;
+      margin-top: 5px;
+      width: 50px;
+      height: 3px;
+      background-color: #ff512f;
+      @include md {
+        margin-top: 10px;
+      }
+    }
+  }
+  .sec-details {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    @include md {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+  }
+}

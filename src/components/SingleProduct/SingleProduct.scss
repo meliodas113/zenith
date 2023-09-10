@@ -1,0 +1,170 @@
+@import '../../css-config/mixins.scss';
+.single-product-main-content {
+  margin: 20px 0;
+  @include md {
+    margin: 75px 0;
+  }
+  .layout {
+    max-width: calc(100% - 20px);
+    margin: 0 auto;
+    @include md {
+      max-width: 1200px;
+    }
+    .single-product-page {
+      display: flex;
+      flex-direction: column;
+      @include md {
+        flex-direction: row;
+      }
+      .left {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.05);
+        flex-shrink: 0;
+        border-radius: 20px;
+        @include md {
+          width: 600px;
+          height: 600px;
+        }
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        @include md {
+          padding: 0 35px;
+        }
+        .name {
+          font-size: 20px;
+          line-height: 28px;
+          margin-bottom: 20px;
+          color: #ff512f;
+          @include md {
+            font-size: 24px;
+            line-height: 32px;
+          }
+        }
+        .price {
+          font-size: 24px;
+          line-height: 32px;
+          margin-bottom: 20px;
+        }
+        .desc {
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: 20px;
+          color: #6b6b6b;
+          @include md {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 20px;
+          }
+        }
+
+        .cart-buttons {
+          display: flex;
+          @include md {
+            margin-top: 30px;
+          }
+          .quantity-buttons {
+            width: fit-content;
+            display: flex;
+            margin-right: 10px;
+            height: 50px;
+            span {
+              font-size: 18px;
+              width: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid rgba(255, 81, 47, 0.2);
+              cursor: pointer;
+              color: #6b6b6b;
+              transition: all 0.2s ease-in-out;
+              &:nth-child(1) {
+                background-color: #ff512f;
+                color: white;
+                &:hover {
+                  color: #ff512f;
+                  background-color: white;
+                }
+              }
+              &:nth-child(2) {
+                width: 60px;
+              }
+              &:nth-child(3) {
+                background-color: #ff512f;
+                color: white;
+                &:hover {
+                  color: #ff512f;
+                  background-color: white;
+                }
+              }
+            }
+          }
+          .add-to-cart-button {
+            outline: 0;
+            border: 0;
+            height: 50px;
+            width: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+            background: #ff512f;
+            border: 1px solid rgba(255, 81, 47, 0.2);
+            border-radius: 40px;
+            flex-grow: 1;
+            transition: all 0.2s ease-in-out;
+            @include md {
+              flex-grow: unset;
+            }
+            svg {
+              margin-right: 10px;
+            }
+            &:hover {
+              color: #ff512f;
+              background-color: white;
+            }
+          }
+        }
+
+        .divider {
+          margin: 20px 0;
+          height: 1px;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .info-item {
+          .text-bold {
+            font-size: 18px;
+            font-weight: 500;
+            display: block;
+            &:nth-child(1) {
+              margin-bottom: 20px;
+            }
+            .social-icons {
+              color: #ff512f;
+              cursor: pointer;
+            }
+            span {
+              font-size: 16px;
+              font-weight: 400;
+              cursor: pointer;
+              color: #6b6b6b;
+            }
+            svg {
+              margin: 0 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
